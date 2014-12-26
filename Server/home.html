@@ -6,11 +6,10 @@
 
         <link rel="stylesheet" href="https://code.jquery.com/jquery-2.1.3.min.js">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     </head>
     <body ontouchmove="BlockMove(event);" >
         <script>
@@ -19,29 +18,31 @@
           event.preventDefault() ;
          }
         </script>
-        <div class="row">
-            <div class="col-md-1">
-                &nbsp;
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-1">
+                    &nbsp;
+                </div>
+                <div class="col-md-10">
+                    <h3>Press the</h3>
+                    <h3>Garage Door Opener Button</h3>
+                </div>
+                <div class="col-md-1">
+                    &nbsp;
+                </div>
             </div>
-            <div class="col-md-10">
-                <h3>Press the</h3>
-                <h3>Garage Door Opener Button</h3>
-            </div>
-            <div class="col-md-1">
-                &nbsp;
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-1">
-                &nbsp;
-            </div>
-            <div class="col-md-10">
-                <form id="opendoor" method="post">
-                    <input type="submit" class="btn btn-default" value="Press" />
-                </form>
-            </div>
-            <div class="col-md-1">
-                &nbsp;
+            <div class="row">
+                <div class="col-md-1">
+                    &nbsp;
+                </div>
+                <div class="col-md-10">
+                    <form id="opendoor" method="post">
+                        <input type="submit" class="btn btn-default" value="Press" />
+                    </form>
+                </div>
+                <div class="col-md-1">
+                    &nbsp;
+                </div>
             </div>
         </div>
     </body>
