@@ -23,7 +23,7 @@ class myHandler(BaseHTTPRequestHandler):
     #Handler for the GET requests
     def do_GET(self):
         if self.path=="/":
-            self.path="/pagecontents.html"
+            self.path="/home.html"
 
         try:
             #Check the file extension required and
