@@ -12,6 +12,8 @@ import sys
 PORT_NUMBER = 8080
 LOG_FILENAME = "/tmp/GarageDoorOpener.log"
 LOG_LEVEL = logging.INFO  # Could be e.g. "DEBUG" or "WARNING"
+SERVICE_FOLDER = "/home/pi/GarageDoorOpener/Server/"
+
 
 #This class will handles any incoming request from
 #the browser
@@ -19,7 +21,7 @@ class myHandler(BaseHTTPRequestHandler):
     #Function to return a file to requester
     def send_Response(self, file, mimetype):
         #Open the static file requested and send it
-        f = open(curdir + sep + file)
+        f = open(SERVICE_FOLDER + file)
         self.send_response(200)
         self.send_header('Content-type', mimetype)
         self.end_headers()
