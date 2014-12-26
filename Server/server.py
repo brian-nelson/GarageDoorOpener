@@ -65,18 +65,18 @@ class myHandler(BaseHTTPRequestHandler):
     #Handler for the POST requests
     def do_POST(self):
         if self.path=="/":
-            #pin = 26
-            #GPIO.setmode(GPIO.BOARD)
+            pin = 26
+            GPIO.setmode(GPIO.BOARD)
 
             try:
-                #GPIO.setup(pin, GPIO.OUT)
-                #GPIO.output(pin, GPIO.HIGH)
-                sleep(2)
-                #GPIO.output(pin, GPIO.LOW)
+                GPIO.setup(pin, GPIO.OUT)
+                GPIO.output(pin, GPIO.HIGH)
+                sleep(1)
+                GPIO.output(pin, GPIO.LOW)
 
                 self.send_Response("success.html", "text/html")
             finally:
-                #GPIO.cleanup()
+                GPIO.cleanup()
                 sleep(.1)
 
         return
