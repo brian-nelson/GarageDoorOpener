@@ -15,7 +15,7 @@ class myHandler(BaseHTTPRequestHandler):
         #Open the static file requested and send it
         f = open(curdir + sep + file)
         self.send_response(200)
-        self.send_header('Content-type',mimetype)
+        self.send_header('Content-type', mimetype)
         self.end_headers()
         self.wfile.write(f.read())
         f.close()
@@ -23,7 +23,7 @@ class myHandler(BaseHTTPRequestHandler):
     #Handler for the GET requests
     def do_GET(self):
         if self.path=="/":
-            self.path="/home.html"
+            self.path = "/home.html"
 
         try:
             #Check the file extension required and
@@ -72,7 +72,6 @@ class myHandler(BaseHTTPRequestHandler):
                     sleep(.1)
 
             return
-
 
 try:
         #Create a web server and define the handler to manage the
