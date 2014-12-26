@@ -54,24 +54,24 @@ class myHandler(BaseHTTPRequestHandler):
         except IOError:
             self.send_error(404,'File Not Found: %s' % self.path)
 
-        #Handler for the POST requests
-        def do_POST(self):
-            if self.path=="/":
-                #pin = 26
-                #GPIO.setmode(GPIO.BOARD)
+    #Handler for the POST requests
+    def do_POST(self):
+        if self.path=="/":
+            #pin = 26
+            #GPIO.setmode(GPIO.BOARD)
 
-                try:
-                    #GPIO.setup(pin, GPIO.OUT)
-                    #GPIO.output(pin, GPIO.HIGH)
-                    sleep(2)
-                    #GPIO.output(pin, GPIO.LOW)
+            try:
+                #GPIO.setup(pin, GPIO.OUT)
+                #GPIO.output(pin, GPIO.HIGH)
+                sleep(2)
+                #GPIO.output(pin, GPIO.LOW)
 
-                    self.send_Response("success.html", "text/html")
-                finally:
-                    #GPIO.cleanup()
-                    sleep(.1)
+                self.send_Response("success.html", "text/html")
+            finally:
+                #GPIO.cleanup()
+                sleep(.1)
 
-            return
+        return
 
 try:
         #Create a web server and define the handler to manage the
