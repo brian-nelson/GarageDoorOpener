@@ -11,6 +11,7 @@ PORT_NUMBER = 8080
 #This class will handles any incoming request from
 #the browser
 class myHandler(BaseHTTPRequestHandler):
+    #Function to return a file to requester
     def send_Response(self, file, mimetype):
         #Open the static file requested and send it
         f = open(curdir + sep + file)
